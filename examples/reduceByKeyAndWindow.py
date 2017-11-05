@@ -104,7 +104,7 @@ if __name__ == "__main__":
     hashtag_tuples = hashtags.map(lambda word: (word, 1))
 
     # Count the hashtags
-    hashtag_counts = hashtag_tuples.reduceByKeyAndWindow(lambda x, y: x + y, lambda x, y: x - y, 30, 5)
+    hashtag_counts = hashtag_tuples.reduceByKeyAndWindow(lambda x, y: x + y, lambda x, y: x - y, 60, 5)
 
     # Print the results
     hashtag_counts.transform(sort_by_value).pprint(10)
