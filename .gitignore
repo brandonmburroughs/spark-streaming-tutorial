@@ -1,0 +1,6 @@
+.idea
+.env
+metastore_db
+config.yaml
+derby.log
+checkpoint
